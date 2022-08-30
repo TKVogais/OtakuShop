@@ -1,0 +1,144 @@
+<section class="seccion-perfil-usuario">
+    <div class="perfil-usuario-header">
+        <div class="perfil-usuario-portada">
+            <div class="perfil-usuario-avatar">
+                <input type="file" name="file" id="avatar-user">
+                <img id="image" name="imagem" src="{{perfil.Path}}" alt="" />
+                <label class="boton-avatar" for="avatar-user">
+                    <i class="fas fa-camera"></i>
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="perfil-usuario-body">
+        <div class="redes-sociales">
+            <a href="http://localhost:8081" class="boton-redes azul fas fa-home"></a>
+            <a href="http://localhost:8081/produtos" class="boton-redes verde fas fa-shopping-bag"></a>
+            <div id="carrinho-perfil" class="boton-redes rosa fas fa-shopping-cart"></div>
+            <button id="logout" class="boton-redes roxo fas fa-sign-out-alt"></button>
+        </div>
+    </div>
+    <div class="form">
+        <div class="form-panel one">
+            <div class="form-header">
+                <h1>
+                    Informações do Usuário
+                </h1>
+            </div>
+            <div class="form-content">
+                <form>
+                    <div class="form-group">
+                        <label for="nome">
+                            Nome Completo
+                        </label>
+                        <input class="input-perfil" type="text" id="nome" name="nome" value="{{perfil.Nome}}" />
+                    </div>
+                    <div class="form-group">
+                        <label for="usuario">
+                            Usuário
+                        </label>
+                        <input value="{{perfil.Usuario}}" class="input-perfil" type="text" id="usuario" name="usuario"
+                            readonly />
+                    </div>
+                    <div class="form-group">
+                        <label for="email">
+                            E-mail
+                        </label>
+                        <input readonly value="{{perfil.Email}}" class="input-perfil" type="text" id="email"
+                            name="email" />
+                    </div>
+                    <div class="form-group">
+                        <label for="username">
+                            Nascimento
+                        </label>
+                        <input class="input-perfil" value="{{perfil.Nascimento}}" type="date" id="nascimento"
+                            name="nascimento" />
+                    </div>
+                    <div class="form-group">
+                        <label for="username">
+                            Telefone
+                        </label>
+                        <input id="telefone" value="{{perfil.Telefone}}" class="input-perfil" type="text" id="telefone"
+                            name="telefone" maxlength="16" />
+                    </div>
+                    <div class="form-group">
+                        <label for="username">
+                            Cep
+                        </label>
+
+                        <input value="{{perfil.Cep}}" type="text" id="cep" maxlength="9" name="cep"
+                            class="input-perfil" />
+                    </div>
+                    <div id="load-perfil" class="load-perfil">
+                        <img src="/images/load-perfil.gif" alt="" srcset="">
+                    </div>
+                </form>
+                <form>
+                    <div class="form-group">
+                        <label for="username">
+                            Estado
+                        </label>
+                        <input value="{{perfil.Estado}}" type="text" id="estado" name="estado"
+                            class="auto input-perfil" />
+                    </div>
+                    <div class="form-group">
+                        <label for="username">
+                            Cidade
+                        </label>
+                        <input value="{{perfil.Cidade}}" type="text" id="cidade" name="cidade"
+                            class="auto input-perfil" />
+                    </div>
+                    <div class="form-group">
+                        <label for="username">
+                            Bairro
+                        </label>
+                        <input type="text" value="{{perfil.Bairro}}" id="bairro" name="bairro"
+                            class="auto input-perfil" />
+                    </div>
+                    <div class="form-group">
+                        <label for="username">
+                            Rua
+                        </label>
+                        <input type="text" id="rua" value="{{perfil.Rua}}" name="rua" class="auto input-perfil" />
+                    </div>
+                    <div class="form-group">
+                        <label for="username">
+                            Número
+                        </label>
+                        <input type="text" id="numero" value="{{perfil.Numero}}" name="numero" class="input-perfil" />
+                    </div>
+                    <div class="form-group">
+                        <label for="username">
+                            Complemento
+                        </label>
+                        <input type="text" id="complemento" value="{{perfil.Complemento}}" name="complemento"
+                            class="input-perfil" />
+                    </div>
+                </form>
+            </div>
+            <div class="box-options">
+                <div id="content-button" class="content-button">
+                    <button id="save-perfil" type="button" class="button green1  right">
+                        <span class="button__text">
+                            Salvar Alterações
+                        </span>
+                        <span class="button__icon">
+                            <i class="fas fa-check"></i>
+                        </span>
+                    </button>
+                </div>
+                <div id="notificacao-200" class="notificacao sucess">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <p id="">Perfil atualizado com sucesso!</p>
+                </div>
+                <div id="notificacao-407" class="notificacao error">
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                    <p id="">Falha ao atualizar o perfil</p>
+                </div>
+                <div id="content-load" class="content-load">
+                    <img src="/images/spinner-blue.gif" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

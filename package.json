@@ -1,0 +1,42 @@
+{
+  "name": "commerce",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "engine": {
+    "node": "14.x"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.1083.0",
+    "axios": "^0.21.4",
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.19.0",
+    "browserify": "^17.0.0",
+    "correios-brasil": "^2.2.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.3.4",
+    "express-session": "^1.17.2",
+    "handlebars": "^4.7.7",
+    "handlebars-intl": "^1.1.2",
+    "handy-storage": "^2.1.6",
+    "helmet": "^4.6.0",
+    "jquery": "^3.6.0",
+    "lowdb": "^3.0.0",
+    "multer": "^1.4.4",
+    "node-correios": "^3.0.2",
+    "node-fetch": "^3.0.0",
+    "node-localstorage": "^2.2.1",
+    "node-storage": "0.0.9",
+    "nodemon": "^2.0.15",
+    "uniq": "^1.0.1"
+  }
+}

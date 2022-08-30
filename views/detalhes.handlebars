@@ -1,0 +1,79 @@
+{{>menu}}
+<!-- Product Details -->
+<section class="section product-detail">
+    <div class="details container-md">
+        <div class="left">
+            <div class="main">
+                <img src={{detalhes.Path}} alt="">
+            </div>
+        </div>
+        <div class="right">
+            <span>Home / {{detalhes.Classe}}</span>
+            <h1>{{detalhes.Nome}}</h1>
+            <div class="price">R$ {{detalhes.Preco}}</div>
+            <form>
+                <div>
+                    {{#if detalhes.IsSize}}
+                    <select id="size-option">
+                        <option value="Select Size" selected disabled>Selecione o tamanho</option>
+                        {{#each detalhes.Sizes}}
+                        <option value={{@index}}>{{item}}</option>
+                        {{/each}}
+                    </select>
+                    <span><i class='bx bx-chevron-down'></i></span>
+                    {{/if}}
+
+                </div>
+            </form>
+
+            <form id="{{detalhes.Id}}" class="form">
+                <input id="product-qtde" class="qtde-prod" type="text" value="1">
+                <button id="add-carrinho" type="button" name="{{detalhes.Id}}"class="addCart">Adicionar no Carrinho</button>
+            </form>
+            <h3>Detalhes do Produto</h3>
+            <p>
+                {{detalhes.Desc1}}<br>
+                {{detalhes.Desc2}}<br>
+                {{detalhes.Desc3}}<br>
+            </p>
+        </div>
+    </div>
+</section>
+
+
+<section class="section featured">
+    <div class="top container">
+        <h1>Produtos Relacionados</h1>
+    </div>
+    <div class="product-center container">
+        {{#each detalhes.semelhantes}}
+        <div class="product">
+            <div class="product-header">
+                <img src={{Path}} alt="">
+                <span class="ocult">{{Id}}</span>
+                <ul class="icons">
+                    <a id="shop{{@index}}" class="btn-shop" produto="{{Id}}">
+                        <span>
+                            <i class="bx bx-shopping-bag"></i>
+                        </span>
+                    </a>
+                    <a id="btn{{@index}}" class="btn-delt" produto="{{Id}}">
+                        <span>
+                            <i class="bx bx-search"></i>
+                        </span>
+                    </a>
+                </ul>
+            </div>
+            <div class="product-footer">
+                <a href="#">
+                    <h3>{{Nome}}</h3>
+                </a>
+                <h4 class="price">R$ {{Preco}}</h4>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</section>
+
+<!-- Footer -->
+{{>rodape}}>

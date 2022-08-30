@@ -1,0 +1,41 @@
+{{>menu}}
+<!-- All Products -->
+<section class="section all-products" id="products">
+    <div class="top container">
+        <h1>Todos os Produtos</h1>
+    </div>
+
+    <div class="product-center container">
+        {{#each produtos.results}}
+        <div class="product">
+            <div class="product-header">
+                <img src={{Path}} alt="">
+                <ul class="icons">
+                    <a id="shop{{@index}}" class="btn-shop" produto="{{Id}}">
+                        <span>
+                            <i class="bx bx-shopping-bag"></i>
+                        </span>
+                    </a>
+                    <a id="btn{{@index}}" class="btn-delt" produto="{{Id}}">
+                        <span>
+                            <i class="bx bx-search"></i>
+                        </span>
+                    </a>
+                </ul>
+            </div>
+            <div class="product-footer">
+                <a href="product-details.html">
+                    <h3>{{Nome}}</h3>
+                </a>
+                <h4 class="price">R$ {{Preco}}</h4>
+            </div>
+        </div>
+        {{else}}
+
+        {{/each}}
+    </div>
+</section>
+
+<!-- Footer -->
+{{>rodape}}
+<!-- End Footer -->

@@ -1,0 +1,115 @@
+{{>menu}}
+<div class="content-cart">
+  {{#if carrinho.vazio}}
+  <div class="vazio">
+    <img src="/images/carrinho-vazio.png" alt="" />
+    <p>
+      Seu carrinho está vazio...
+    </p>
+  </div>
+  {{else}}
+  <h2>
+    Carrinho de Compras
+  </h2>
+  <div class="main-cart">
+    {{#each carrinho.results }}
+    <div class="produto" id="prod{{@index}}">
+      <div class="img-produto">
+        <img src="{{Path}}" alt="" srcset="" />
+      </div>
+      <div class="inf-prod">
+        <span class="desc-span">
+          Descrição: {{Produto}}
+        </span>
+        {{#if IsSize}}
+        <div class="centralize">
+          <span class="tamanho">
+            Tamanho:
+            <div class="fk" id="{{@index}}">
+              <div class="size click-size" id="div-size{{@index}}">
+                <span id="Size{{Id}}">
+                  {{Size}}
+                </span>
+              </div>
+            </div>
+          </span>
+          <div id="btns{{Id}}" class="sizes" mob="{{IdProduto}}" name="{{Id}}">
+            {{#each Sizes}}
+            <div id="{{id}}">
+              <div class="size">
+                <p id="btn_click_size" class="btn_size">
+                  {{item}}
+                </p>
+              </div>
+            </div>
+            {{/each}}
+          </div>
+        </div>
+        {{/if}}
+        {{{MaiorQue Estoque 0}}}
+        <span id="preco{{@index}}" class="preco-p">
+          Valor: R$ {{Preco}}
+        </span>
+        <span id="total{{@index}}" class="preco-p total-span">
+          Total: R$ {{Total}}
+        </span>
+      </div>
+      <div class="infos">
+        <div class="qtde-prod">
+          <div id="{{@index}}" class="alter-btn">
+            <i id="down{{@index}}" name={{IdProduto}} class="down fas fa-chevron-down"></i>
+            <div class="spand">
+              <span id="span{{@index}}">
+                {{Quant}}
+              </span>
+            </div>
+            <i id="up{{@index}}" name={{IdProduto}} class="up fas fa-chevron-up"></i>
+          </div>
+          <div id="load-event{{@index}}" class="load-event loadingio-spinner-spinner-u1vmkpvt7y9">
+            <div class="ldio-stnjk7s33g7">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="infotrash">
+        <span>
+          <i id="delete{{@index}}" mob="{{IdProduto}}" class="delete-btn fas fa-trash-alt"></i>
+        </span>
+      </div>
+    </div>
+    {{/each}}
+    <span id="span-total" class="preco-p"></span>
+    <div class="linha"></div>
+    <div class="btns-bottom">
+      <button id="delete-all" type="button" class="delete-all button roxo m-">
+        <span class="button__text">
+          Limpar Carrinho
+        </span>
+      </button>
+      <button id="mais-produtos" type="button" class="button red m-">
+        <span class="button__text">
+          Continuar comprando
+        </span>
+      </button>
+      <button id="fCompra" type="button" class="button green1 m-">
+        <span class="button__text">
+          Finalizar Compra
+        </span>
+      </button>
+    </div>
+  </div>
+  {{/if}}
+</div>
+{{>rodape}}
