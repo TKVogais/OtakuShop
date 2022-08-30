@@ -17,7 +17,7 @@ const EventoBotaoTamanhos = async () => {
     const {
         urlApi,
         urlHost
-    } = await axios.get('http://localhost:8081/url').then(({
+    } = await axios.get('https://www.otakushopp.comurl').then(({
         data
     }) => {
         return data
@@ -74,7 +74,7 @@ const EventoBotaoLimparCarrinho = () => {
 const EventoBotaoRedirecionaProdutos = async () => {
     const {
         urlHost
-    } = await axios.get('http://localhost:8081/url').then(({
+    } = await axios.get('https://www.otakushopp.com/url').then(({
         data
     }) => {
         return data
@@ -433,7 +433,7 @@ const limparCarrinho = () => {
     })).then((response) => {
         setTimeout(() => {
             const Key = localStorage.getItem("key")
-            window.location.href = `http://localhost:8081/carrinho/${Key}`;
+            window.location.href = `https://www.otakushopp.com/carrinho/${Key}`;
         }, 300)
     }).catch((error) => {
         console.log(error)

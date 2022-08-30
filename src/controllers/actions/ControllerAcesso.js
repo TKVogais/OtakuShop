@@ -54,7 +54,7 @@ const MessagemFeedBack = ({ state }) => {
         notificacao.style.display = "none"
         switch (state) {
             case (200):
-                window.location.replace("http://localhost:8081")
+                window.location.replace("https://www.otakushopp.com")
                 break;
             case (201):
                 document.getElementById('c_user').value = "";

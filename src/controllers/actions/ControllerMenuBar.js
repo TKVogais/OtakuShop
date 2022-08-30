@@ -9,31 +9,31 @@ const BtnCarrinhoB = document.getElementById('menu-carrinho-b')
 
 if (BtnHome) {
     BtnHome.addEventListener("click", () => {
-        window.location.replace("http://localhost:8081/")
+        window.location.replace("https://www.otakushopp.com/")
     })
     BtnProdutos.addEventListener("click", () => {
-        window.location.href = "http://localhost:8081/produtos"
+        window.location.href = "https://www.otakushopp.com/produtos"
     })
     BtnPerfil.addEventListener("click", () => {
         let Key = localStorage.getItem("key")
-        window.location.href = `http://localhost:8081/perfil/${Key}`
+        window.location.href = `https://www.otakushopp.com/perfil/${Key}`
     })
     BtnCarrinho.addEventListener("click", () => {
         let Key = localStorage.getItem("key")
-        window.location.href = `http://localhost:8081/carrinho/${Key}`
+        window.location.href = `https://www.otakushopp.com/carrinho/${Key}`
     })
     BtnHomeB.addEventListener("click", () => {
-        window.location.replace("http://localhost:8081/")
+        window.location.replace("https://www.otakushopp.com")
     })
     BtnProdutosB.addEventListener("click", () => {
-        window.location.href = "http://localhost:8081/produtos"
+        window.location.href = "https://www.otakushopp.com/produtos"
     })
     BtnPerfilB.addEventListener("click", () => {
         let Key = localStorage.getItem("key")
-        window.location.href = `http://localhost:8081/perfil/${Key}`
+        window.location.href = `https://www.otakushopp.com/perfil/${Key}`
     })
     BtnCarrinhoB.addEventListener("click", () => {
         let Key = localStorage.getItem("key")
-        window.location.href = `http://localhost:8081/carrinho/${Key}`
+        window.location.href = `https://www.otakushopp.com/carrinho/${Key}`
     })
 }

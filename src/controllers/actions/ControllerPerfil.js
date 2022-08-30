@@ -30,7 +30,7 @@ function Logout() {
             axios.post('https://www.api-otaku-shop.com.br/api/logout', new URLSearchParams({
                 'id': key,
             })).then((response) => {
-                window.location.replace("http://localhost:8081")
+                window.location.replace("https://www.otakushopp.com")
             }).catch((error) => {
                 console.log(error)
             });
@@ -117,7 +117,7 @@ function AtualizarPerfil() {
                 let formData = new FormData()
                 formData.append('image', Image.files[0])
                 formData.append('Usuario', usuario.value)
-                const Path = await axios.post('http://localhost:8081/upload-perfil', formData).then(({ data }) => {
+                const Path = await axios.post('https://www.otakushopp.com/upload-perfil', formData).then(({ data }) => {
                     return data
                 }).catch((error) => {
                     console.log(error)

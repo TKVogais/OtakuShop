@@ -6,7 +6,7 @@ for (let i in detalhes) {
         item.addEventListener("click", (e) => {
             let data = e.target.parentNode.parentNode.getAttribute("produto")
             if (data) {
-                window.location.href = `http://localhost:8081/detalhes/${data}`
+                window.location.href = `https://www.otakushopp.com/detalhes/${data}`
             }
         })
 
@@ -33,15 +33,15 @@ for (let i in adicionar) {
                             })).then((response) => {
                                 if (response.data.affectedRows == 1) {
                                     const Key = localStorage.getItem("key")
-                                    window.location.href = `http://localhost:8081/carrinho/${Key}`
+                                    window.location.href = `https://www.otakushopp.com/carrinho/${Key}`
                                 }
                             })
                         } else {
-                            window.location.href = `http://localhost:8081/acesso`
+                            window.location.href = `https://www.otakushopp.com/acesso`
                         }
                     })
                 } else {
-                    window.location.href = `http://localhost:8081/acesso`
+                    window.location.href = `https://www.otakushopp.com/acesso`
                 }
             } catch (error) {
                 console.log(error)

@@ -32,14 +32,14 @@ function AdicionarProduto() {
                                             "Size": `${Tamanho}`
                                         })).then((response) => {
                                             const Key = localStorage.getItem("key")
-                                            window.location.href = `http://localhost:8081/carrinho/${Key}`
+                                            window.location.href = `https://www.otakushopp.com/carrinho/${Key}`
                                         })
                                     } else {
-                                        window.location.href = `http://localhost:8081/acesso`
+                                        window.location.href = `https://www.otakushopp.com/acesso`
                                     }
                                 })
                             } else {
-                                window.location.href = `http://localhost:8081/acesso`
+                                window.location.href = `https://www.otakushopp.com/acesso`
                             }
                         }
                     } catch (error) {
