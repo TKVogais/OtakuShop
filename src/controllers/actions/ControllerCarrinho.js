@@ -17,7 +17,7 @@ const EventoBotaoTamanhos = async () => {
     const {
         urlApi,
         urlHost
-    } = await axios.get('https://www.otakushopp.comurl').then(({
+    } = await axios.get('https://www.otakushopp.com/url').then(({
         data
     }) => {
         return data
