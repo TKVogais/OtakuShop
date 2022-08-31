@@ -309,7 +309,7 @@
     border-radius: 4px;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
     box-sizing: border-box;
-    margin: 30px auto 10px;
+    /* margin: 30px auto 10px; */
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -465,7 +465,7 @@ input[type="date"] {
 
 .form-panel.one:before {
     content: "";
-    display: block;
+    display: flex;
     opacity: 0;
     visibility: hidden;
     transition: 0.3s ease;
@@ -546,7 +546,6 @@ input[type="date"] {
 .form-content {
     display: flex;
     flex-direction: row;
-    /* background-color: #317FFF; */
 }
 
 .form-content form {
@@ -655,7 +654,7 @@ input[type="date"] {
 .redes-sociales:hover div {
     cursor: pointer;
 }
-@media only screen and (max-width: 567px) {
+@media only screen and (min-width: 400px) and (max-width: 567px) {
     .perfil-usuario-body{
         margin-top: 50px;
     }
@@ -670,9 +669,16 @@ input[type="date"] {
     .form-content{
         flex-direction: column;
         text-align: center;
+        margin-left: -20px;
+        width: 100%;
     }
     .form-content form {
-        margin: 0 0 0 20px;
-        width: 100%;
+        width: 95%;
+    }
+    .form{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
     }
 }
