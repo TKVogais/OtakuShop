@@ -407,13 +407,13 @@ li {
     .header .hero-img-1 {
         height: 25rem;
         display: block;
-        bottom: 3%;
+        bottom: 5%;
         left: 25%
     }
 
     .hero-content {
-        top: 35%;
-        transform: translate(15%, -50%);
+        top: 30%;
+        transform: translate(10%, -45%);
     }
 
     .header .hero-img {
